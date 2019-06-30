@@ -14,7 +14,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// わざマスタ
     /// </summary>
-    public class Master_Waza : _Master_Mom
+    public class Master_Waza
     {
         //プロパティ
         public int M_SKILLNO { get; set; }

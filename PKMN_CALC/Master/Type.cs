@@ -13,7 +13,7 @@ using PKMN_CALC.Utility;
 namespace PKMN_CALC.Master
 {
     //マスタランク
-    public class Master_Type : _Master_Mom
+    public class Master_Type 
     {
         //プロパティ
         public eTypeNo M_TYPENO { get; set; }

@@ -11,7 +11,7 @@ using PKMN_CALC.Utility;
 namespace PKMN_CALC.Master
 {
     //特殊な処理をする技リスト
-    class Master_Waza_Sp : _Master_Mom
+    class Master_Waza_Sp
     {
         //List<int> cWaza_Sp;
     }

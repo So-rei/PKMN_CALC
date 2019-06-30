@@ -15,7 +15,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// ポケモンマスタ
     /// </summary>
-    public class Master_Pokemon : _Master_Mom
+    public class Master_Pokemon
     {
         //プロパティ
         public int M_POKENO { get; set; }
@@ -25,16 +25,31 @@ namespace PKMN_CALC.Master
         public int M_ZUKANNO { get; set; }
         public int M_GENELATION { get; set; }
         public eTypeNo M_TYPE_1 { get; set; }
-        public eTypeNo M_TYPE_2 { get; set; }
+        public eTypeNo? M_TYPE_2 { get; set; }//タイプ2は無いことがある
         public int M_ABILITY_1 { get; set; }
         public int M_ABILITY_2 { get; set; }
-        public int M_ABILITY_3 { get; set; }        
-        public Status M_ST_SYUZOKU { get; set; } = new Status();//ステータスセット(HABCDS) シリアライズ処理関数で一旦objectを介しているので、タプル等では名前解決が出来なくなる
+        public int M_ABILITY_3 { get; set; }
+        public int M_H { get; set; } = 0;
+        public int M_A { get; set; } = 0;
+        public int M_B { get; set; } = 0;
+        public int M_C { get; set; } = 0;
+        public int M_D { get; set; } = 0;
+        public int M_S { get; set; } = 0;
         public int M_SEX_PER { get; set; }
-        public int M_LO { get; set; }
+        public int M_LO { get; set; }//未進化なら1
         public int M_MEGA_POKENO1 { get; set; }//必須でない
         public int M_MEGA_POKENO2 { get; set; }//必須でない
         public int M_RULE_CATE { get; set; }//必須でない
+
+        //HABCDSはStatusクラスとして運用する
+        [JsonIgnore]
+        public Status M_ST_SYUZOKU
+        {
+            get
+            {
+                return new Status((M_H, M_A, M_B, M_C, M_D, M_S));//ステータスセット(HABCDS) シリアライズ処理関数で一旦objectを介しているので、タプル等では名前解決が出来なくなる
+            }
+        }
 
     }
 

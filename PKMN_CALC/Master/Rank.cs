@@ -15,7 +15,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// ランクマスタ
     /// </summary>
-    public class Master_Rank : _Master_Mom
+    public class Master_Rank
     {
         //プロパティ
         public int M_RANK { get; set; }

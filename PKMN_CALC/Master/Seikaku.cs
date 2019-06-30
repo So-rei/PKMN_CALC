@@ -14,7 +14,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// 性格マスタ
     /// </summary>
-    public class Master_Seikaku : _Master_Mom
+    public class Master_Seikaku
     {
         //プロパティ
         public int M_SEIKAKUNO { get; set; }

@@ -14,7 +14,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// アイテムマスタ
     /// </summary>
-    public class Master_Item : _Master_Mom
+    public class Master_Item
     {
         //プロパティ
         public int M_ITEMNO { get; set; }

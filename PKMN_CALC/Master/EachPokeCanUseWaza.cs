@@ -14,7 +14,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// 各ポケモンが覚えるわざリスト
     /// </summary>
-    public class Master_EachPokeCanUseWaza : _Master_Mom
+    public class Master_EachPokeCanUseWaza
     {
         //プロパティ
         public int M_ID { get; set; }

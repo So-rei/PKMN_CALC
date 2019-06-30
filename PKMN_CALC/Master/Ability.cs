@@ -12,7 +12,7 @@ namespace PKMN_CALC.Master
     /// <summary>
     /// 特性マスタ
     /// </summary>
-    class Master_Ability :_Master_Mom
+    class Master_Ability
     {
     }
 }
