@@ -120,7 +120,7 @@ namespace PKMN_CALC.Calc
                     foreach (var dvalue in StDoryoku.ST)
                         if (dvalue > 255 || dvalue < 0) return false;//努力値0-255以内であること
 
-                    if (StDoryoku.ST.Sum() > 510) return false;//努力値合計が510以内であること
+                    if (StDoryoku.ST.Sum() > 510) return false;//努力値合計が510以内であること.
 
                     return true;
                 }
