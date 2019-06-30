@@ -1,0 +1,54 @@
+[
+  {
+    "M_POKENO": 998,
+    "M_FORM": 1,
+    "M_POKENAME_JPN": "ランドロス(けしん)",
+    "M_POKENAME_ENG": "Landoros(Normal)",
+    "M_ZUKANNO": 646,
+    "M_GENELATION": 6,
+    "M_TYPE_1": 8,
+    "M_TYPE_2": 9,
+    "M_ABILITY_1": 2,
+    "M_ABILITY_2": 3,
+    "M_ABILITY_3": 0,
+    "M_ST_SYUZOKU": {
+      "H": 89,
+      "A": 125,
+      "B": 90,
+      "C": 115,
+      "D": 80,
+      "S": 101
+    },
+    "M_SEX_PER": 1,
+    "M_LO": 0,
+    "M_MEGA_POKENO1": 0,
+    "M_MEGA_POKENO2": 0,
+    "M_RULE_CATE": 1
+  },
+  {
+    "M_POKENO": 999,
+    "M_FORM": 2,
+    "M_POKENAME_JPN": "ランドロス(れいじゅう)",
+    "M_POKENAME_ENG": "Landoros(Ghost)",
+    "M_ZUKANNO": 646,
+    "M_GENELATION": 6,
+    "M_TYPE_1": 8,
+    "M_TYPE_2": 9,
+    "M_ABILITY_1": 1,
+    "M_ABILITY_2": 0,
+    "M_ABILITY_3": 0,
+    "M_ST_SYUZOKU": {
+      "H": 89,
+      "A": 145,
+      "B": 90,
+      "C": 105,
+      "D": 80,
+      "S": 91
+    },
+    "M_SEX_PER": 1,
+    "M_LO": 0,
+    "M_MEGA_POKENO1": 0,
+    "M_MEGA_POKENO2": 0,
+    "M_RULE_CATE": 1
+  }
+]

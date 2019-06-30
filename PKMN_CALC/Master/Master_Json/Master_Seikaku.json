@@ -1,0 +1,177 @@
+[
+  {
+    "M_SEIKAKUNO": 1,
+    "M_SEIKAKUNAME_JPN": "‚ª‚ñ‚Î‚è‚â",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 0,
+    "M_DOWN": 0
+  },
+  {
+    "M_SEIKAKUNO": 2,
+    "M_SEIKAKUNAME_JPN": "‚³‚Ý‚µ‚ª‚è",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 1,
+    "M_DOWN": 2
+  },
+  {
+    "M_SEIKAKUNO": 3,
+    "M_SEIKAKUNAME_JPN": "‚¢‚¶‚Á‚Ï‚è",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 1,
+    "M_DOWN": 3
+  },
+  {
+    "M_SEIKAKUNO": 4,
+    "M_SEIKAKUNAME_JPN": "‚â‚ñ‚¿‚á",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 1,
+    "M_DOWN": 4
+  },
+  {
+    "M_SEIKAKUNO": 5,
+    "M_SEIKAKUNAME_JPN": "‚ä‚¤‚©‚ñ",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 1,
+    "M_DOWN": 5
+  },
+  {
+    "M_SEIKAKUNO": 6,
+    "M_SEIKAKUNAME_JPN": "‚¸‚Ô‚Æ‚¢",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 2,
+    "M_DOWN": 1
+  },
+  {
+    "M_SEIKAKUNO": 7,
+    "M_SEIKAKUNAME_JPN": "‚·‚È‚¨",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 0,
+    "M_DOWN": 0
+  },
+  {
+    "M_SEIKAKUNO": 8,
+    "M_SEIKAKUNAME_JPN": "‚í‚ñ‚Ï‚­",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 2,
+    "M_DOWN": 3
+  },
+  {
+    "M_SEIKAKUNO": 9,
+    "M_SEIKAKUNAME_JPN": "‚Ì‚¤‚Ä‚ñ‚«",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 2,
+    "M_DOWN": 4
+  },
+  {
+    "M_SEIKAKUNO": 10,
+    "M_SEIKAKUNAME_JPN": "‚Ì‚ñ‚«",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 2,
+    "M_DOWN": 5
+  },
+  {
+    "M_SEIKAKUNO": 11,
+    "M_SEIKAKUNAME_JPN": "‚Ð‚©‚¦‚ß",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 3,
+    "M_DOWN": 1
+  },
+  {
+    "M_SEIKAKUNO": 12,
+    "M_SEIKAKUNAME_JPN": "‚¨‚Á‚Æ‚è",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 3,
+    "M_DOWN": 2
+  },
+  {
+    "M_SEIKAKUNO": 13,
+    "M_SEIKAKUNAME_JPN": "‚Ä‚ê‚â",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 0,
+    "M_DOWN": 0
+  },
+  {
+    "M_SEIKAKUNO": 14,
+    "M_SEIKAKUNAME_JPN": "‚¤‚Á‚©‚è‚â",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 3,
+    "M_DOWN": 4
+  },
+  {
+    "M_SEIKAKUNO": 15,
+    "M_SEIKAKUNAME_JPN": "‚ê‚¢‚¹‚¢",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 3,
+    "M_DOWN": 5
+  },
+  {
+    "M_SEIKAKUNO": 16,
+    "M_SEIKAKUNAME_JPN": "‚¨‚¾‚â‚©",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 4,
+    "M_DOWN": 1
+  },
+  {
+    "M_SEIKAKUNO": 17,
+    "M_SEIKAKUNAME_JPN": "‚¨‚Æ‚È‚µ‚¢",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 4,
+    "M_DOWN": 2
+  },
+  {
+    "M_SEIKAKUNO": 18,
+    "M_SEIKAKUNAME_JPN": "‚µ‚ñ‚¿‚å‚¤",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 4,
+    "M_DOWN": 3
+  },
+  {
+    "M_SEIKAKUNO": 19,
+    "M_SEIKAKUNAME_JPN": "‚«‚Ü‚®‚ê",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 0,
+    "M_DOWN": 0
+  },
+  {
+    "M_SEIKAKUNO": 20,
+    "M_SEIKAKUNAME_JPN": "‚È‚Ü‚¢‚«",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 4,
+    "M_DOWN": 5
+  },
+  {
+    "M_SEIKAKUNO": 21,
+    "M_SEIKAKUNAME_JPN": "‚¨‚­‚Ñ‚å‚¤",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 5,
+    "M_DOWN": 1
+  },
+  {
+    "M_SEIKAKUNO": 22,
+    "M_SEIKAKUNAME_JPN": "‚¹‚Á‚©‚¿",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 5,
+    "M_DOWN": 2
+  },
+  {
+    "M_SEIKAKUNO": 23,
+    "M_SEIKAKUNAME_JPN": "‚æ‚¤‚«",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 5,
+    "M_DOWN": 3
+  },
+  {
+    "M_SEIKAKUNO": 24,
+    "M_SEIKAKUNAME_JPN": "‚Þ‚¶‚á‚«",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 5,
+    "M_DOWN": 4
+  },
+  {
+    "M_SEIKAKUNO": 25,
+    "M_SEIKAKUNAME_JPN": "‚Ü‚¶‚ß",
+    "M_SEIKAKUNAME_ENG": "",
+    "M_UP": 0,
+    "M_DOWN": 0
+  }
+]

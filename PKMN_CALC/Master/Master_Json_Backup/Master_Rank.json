@@ -1,0 +1,67 @@
+[
+  {
+    "M_RANK": 6,
+    "M_BUNSHI": 8,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": 5,
+    "M_BUNSHI": 7,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": 4,
+    "M_BUNSHI": 6,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": 3,
+    "M_BUNSHI": 5,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": 2,
+    "M_BUNSHI": 4,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": 1,
+    "M_BUNSHI": 3,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": 0,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 2
+  },
+  {
+    "M_RANK": -1,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 3
+  },
+  {
+    "M_RANK": -2,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 4
+  },
+  {
+    "M_RANK": -3,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 5
+  },
+  {
+    "M_RANK": -4,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 6
+  },
+  {
+    "M_RANK": -5,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 7
+  },
+  {
+    "M_RANK": -6,
+    "M_BUNSHI": 2,
+    "M_BUNBO": 8
+  }
+]

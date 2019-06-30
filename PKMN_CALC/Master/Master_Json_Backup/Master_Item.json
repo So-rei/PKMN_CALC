@@ -1,0 +1,209 @@
+[
+  {
+    "M_ITEMNO": 0,
+    "M_ITEMNAME_JPN": "(なし)",
+    "M_ITEMNAME_ENG": "None",
+    "M_ITEM_CATE": 0,
+    "M_ITEM_LOST": 0,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 0
+  },
+  {
+    "M_ITEMNO": 11,
+    "M_ITEMNAME_JPN": "いのちのたま",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 2,
+    "M_ITEM_LOST": 0,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 0
+  },
+  {
+    "M_ITEMNO": 47,
+    "M_ITEMNAME_JPN": "こだわりスカーフ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 2,
+    "M_ITEM_LOST": 0,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 0
+  },
+  {
+    "M_ITEMNO": 48,
+    "M_ITEMNAME_JPN": "こだわりハチマキ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 2,
+    "M_ITEM_LOST": 0,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 0
+  },
+  {
+    "M_ITEMNO": 49,
+    "M_ITEMNAME_JPN": "こだわりメガネ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 2,
+    "M_ITEM_LOST": 0,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 0
+  },
+  {
+    "M_ITEMNO": 901,
+    "M_ITEMNAME_JPN": "ノーマルZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 0
+  },
+  {
+    "M_ITEMNO": 902,
+    "M_ITEMNAME_JPN": "ほのおZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 1
+  },
+  {
+    "M_ITEMNO": 903,
+    "M_ITEMNAME_JPN": "みずZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 2
+  },
+  {
+    "M_ITEMNO": 904,
+    "M_ITEMNAME_JPN": "でんきZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 3
+  },
+  {
+    "M_ITEMNO": 905,
+    "M_ITEMNAME_JPN": "くさZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 4
+  },
+  {
+    "M_ITEMNO": 906,
+    "M_ITEMNAME_JPN": "こおりZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 5
+  },
+  {
+    "M_ITEMNO": 907,
+    "M_ITEMNAME_JPN": "かくとうZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 6
+  },
+  {
+    "M_ITEMNO": 908,
+    "M_ITEMNAME_JPN": "どくZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 7
+  },
+  {
+    "M_ITEMNO": 909,
+    "M_ITEMNAME_JPN": "じめんZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 8
+  },
+  {
+    "M_ITEMNO": 910,
+    "M_ITEMNAME_JPN": "ひこうZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 9
+  },
+  {
+    "M_ITEMNO": 911,
+    "M_ITEMNAME_JPN": "エスパーZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 10
+  },
+  {
+    "M_ITEMNO": 912,
+    "M_ITEMNAME_JPN": "むしZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 11
+  },
+  {
+    "M_ITEMNO": 913,
+    "M_ITEMNAME_JPN": "いわZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 12
+  },
+  {
+    "M_ITEMNO": 914,
+    "M_ITEMNAME_JPN": "ゴーストZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 13
+  },
+  {
+    "M_ITEMNO": 915,
+    "M_ITEMNAME_JPN": "ドラゴンZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 14
+  },
+  {
+    "M_ITEMNO": 916,
+    "M_ITEMNAME_JPN": "あくZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 15
+  },
+  {
+    "M_ITEMNO": 917,
+    "M_ITEMNAME_JPN": "はがねZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 16
+  },
+  {
+    "M_ITEMNO": 918,
+    "M_ITEMNAME_JPN": "フェアリーZ",
+    "M_ITEMNAME_ENG": "",
+    "M_ITEM_CATE": 9,
+    "M_ITEM_LOST": 9,
+    "M_KINOMIFLG": 0,
+    "M_TYPE_BUFF": 17
+  }
+]
