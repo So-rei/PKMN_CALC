@@ -98,7 +98,7 @@ namespace PKMN_CALC.Calc
                                 StRet.ST[i] = (int)Math.Floor(StRet.ST[i] * 0.9);
                             break;
                         default:
-                            OutputErrorLog(sErrorPlace, "種族値が異常です");
+                            OutputErrorLog(sErrorPlace, "種族値が異常です。");
                             return null;
                     }
                 }
@@ -120,7 +120,7 @@ namespace PKMN_CALC.Calc
                     foreach (var dvalue in StDoryoku.ST)
                         if (dvalue > 255 || dvalue < 0) return false;//努力値0-255以内であること
 
-                    if (StDoryoku.ST.Sum() > 510) return false;//努力値が510以内であること
+                    if (StDoryoku.ST.Sum() > 510) return false;//努力値合計が510以内であること
 
                     return true;
                 }
