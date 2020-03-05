@@ -20,10 +20,10 @@ namespace PKMN_CALC.Master
         public int M_ITEMNO { get; set; }
         public string M_ITEMNAME_JPN { get; set; }
         public string M_ITEMNAME_ENG { get; set; }
-        public int M_ITEM_CATE { get; set; }
-        public int M_ITEM_LOST { get; set; }
-        public int M_KINOMIFLG { get; set; } //必須ではない
-        public int M_TYPE_BUFF { get; set; } //必須ではない
+        public int M_ITEM_CATE { get; set; } //カテゴリー
+        public int M_ITEM_LOST { get; set; } //一度使うとなくなるフラグ
+        public int M_KINOMIFLG { get; set; } //木のみであるフラグ　必須ではない
+        public Master_Type M_TYPE_BUFF { get; set; } //タイプ強化アイテムフラグ　必須ではない
     }
 
     /// <summary>

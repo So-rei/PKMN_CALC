@@ -57,8 +57,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calc\Calc.cs" />
+    <Compile Include="Calc\CalcBattle.cs" />
     <Compile Include="Calc\CalcStatus.cs" />
+    <Compile Include="Calc\_Calc_Common.cs" />
     <Compile Include="Master\_Master_Common.cs" />
     <Compile Include="Utility\ErrorLog.cs" />
     <Compile Include="WinAppForm\SubForm\fCalcDamage.cs">

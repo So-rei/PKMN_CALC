@@ -17,7 +17,7 @@ namespace PKMN_CALC.Master
     /// </summary>
     public static class _Master_Common
     {
-        static readonly string sErrorPlace = typeof(_Master_Common).FullName + "," + MethodBase.GetCurrentMethod().Name;
+        static internal string sErrorPlace = typeof(_Master_Common).FullName + "," + MethodBase.GetCurrentMethod().Name;
 
         /// <summary>
         /// nullやstringの""を0に変換してint型で返す
@@ -195,6 +195,39 @@ namespace PKMN_CALC.Master
             {
                 return ST_IE.GetEnumerator();
             }
+        }
+
+        /// <summary>
+        /// 場のすべての状態（ステータスを含む）（ステータス上下、ターン数、持ち物など）
+        /// </summary>
+        public class Situation
+        {
+            public Master_Pokemon POKE;//ポケモン名
+            public Status ST;//ステータス
+            public int UP_A;//ステータス上昇A
+            public int UP_B;//ステータス上昇B
+            public int UP_C;//ステータス上昇C
+            public int UP_D;//ステータス上昇D
+            public int UP_S;//ステータス上昇S
+            public int REST_HP;//残HP
+            public Master_Item ITEM;//持ち物
+
+            ////その他経過ターン系            
+            //public bool FIRST = true;//出て初ターンである（ねこだまし、であいがしら、たたみがえし用）
+            //public int SONG = -1;//ほろびのうた
+            //public int POISON = -1;//どくどくターン数
+
+            //特殊
+            //充電、みずびたし、そうでん、てだすけなど
+        }
+
+        public class Field
+        {
+            ////共通フィールド状態
+            //public IEnumerable<OwnField> FIELD;//追い風、トリックルーム、ねばねばネットなど、共通でない場状態
+            //public TapuField FIELD_T;//サイコ、グラス、エレキ、フィールド
+            //public Climate CL;//天候
+            //public int TURN;//合計ターン数
         }
     }
 }

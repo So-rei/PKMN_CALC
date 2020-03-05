@@ -58,7 +58,8 @@ namespace PKMN_CALC.Master
         M_DRAGON,
         M_AKU,
         M_HAGANE,
-        M_FAIRY
+        M_FAIRY,
+        M_NULL //タイプなし　燃え尽きる・わるあがきなど用
     }
 
     /// <summary>

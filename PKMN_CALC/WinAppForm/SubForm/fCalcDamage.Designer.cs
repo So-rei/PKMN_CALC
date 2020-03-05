@@ -1,6 +1,6 @@
 ﻿namespace PKMN_CALC.WinAppForm
 {
-    partial class fCalcDamage
+    partial class fCalcBattle
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "fCalcDamage";
+            this.Text = "fCalcBattle";
         }
 
         #endregion

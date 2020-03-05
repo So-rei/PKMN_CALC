@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection;
 using PKMN_CALC.Master;
-using static PKMN_CALC.Master._Master_Data;
+using static PKMN_CALC.Master._Master_Init;
 using static PKMN_CALC.Master._Master_Common;
 using static PKMN_CALC.Utility.ErrorLog;
 
@@ -83,14 +83,14 @@ namespace PKMN_CALC.Calc
                     switch ((Stjyun)(i))
                     {
                         case Stjyun.H:
-                            StRet.H = Convert.ToInt32(Math.Floor((x.M_ST_SYUZOKU.H * 2 + StKotai.H + Math.Floor((double)(StDoryoku.H / 4))) * StLv / 100) + 10 + StLv);
+                            StRet.H = Convert.ToInt32(Math.Floor( (x.M_ST_SYUZOKU.H * 2 + StKotai.H + Math.Floor((double)(StDoryoku.H / 4))) * StLv / 100) + 10 + StLv);
                             break;
                         case Stjyun.A:
                         case Stjyun.B:
                         case Stjyun.C:
                         case Stjyun.D:
                         case Stjyun.S:
-                            StRet.ST[i] = Convert.ToInt32(Math.Floor((x.M_ST_SYUZOKU.ST[i] * 2 + StKotai.ST[i] + Math.Floor((double)(StDoryoku.ST[i] / 4))) * StLv / 100) + 5);
+                            StRet.ST[i] = Convert.ToInt32(Math.Floor( (x.M_ST_SYUZOKU.ST[i] * 2 + StKotai.ST[i] + Math.Floor((double)(StDoryoku.ST[i] / 4))) * StLv / 100) + 5);
                             //性格補正
                             if (y.M_UP == (Stjyun)(i))
                                 StRet.ST[i] = (int)Math.Floor(StRet.ST[i] * 1.1);
@@ -98,29 +98,26 @@ namespace PKMN_CALC.Calc
                                 StRet.ST[i] = (int)Math.Floor(StRet.ST[i] * 0.9);
                             break;
                         default:
-                            OutputErrorLog(sErrorPlace, "種族値が異常です。");
+                            OutputErrorLog(sErrorPlace, "種族値が異常です");
                             return null;
                     }
                 }
-
-
+                
+                            
                 //計算結果を返す
                 return StRet;
 
                 //入力チェック用ローカル関数------------------------------
                 bool St_Check()
                 {
-                    if (StLv > 100 || StLv < 1) return false;//Lv1-100以内であること
-
+                    if (StLv > 100 || StLv < 1) return false;//Lv1-100
                     if (StKotai is null) return false;
                     foreach (var kvalue in StKotai.ST)
-                        if (kvalue > 31 || kvalue < 0) return false;//個体値0-31以内であること
+                        if (kvalue > 31 || kvalue < 0) return false;//個体値0-31
 
                     if (StDoryoku is null) return false;
                     foreach (var dvalue in StDoryoku.ST)
-                        if (dvalue > 255 || dvalue < 0) return false;//努力値0-255以内であること
-
-                    if (StDoryoku.ST.Sum() > 510) return false;//努力値合計が510以内であること.
+                        if (dvalue > 255 || dvalue < 0) return false;//努力値0-255
 
                     return true;
                 }

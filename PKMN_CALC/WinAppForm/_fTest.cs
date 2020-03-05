@@ -106,7 +106,7 @@ namespace PKMN_CALC.WinAppForm
             //努力値
             Status StDoryoku = new Status((252, 252, 0, 0, 0, 0));
             //ポケモン名＋性格名＋個体値＋努力値　があれば、実数値が計算可能。
-            Status StRet = CalcDamage.StatusCalc(998, 23, StKotai, StDoryoku);
+            Status StRet = CalcStatus.CalcParam(998, 23, StKotai, StDoryoku);
             lbLog.Items.Add("\r\n" + "H=" + StRet.H.ToString());
             lbLog.Items.Add("\r\n" + "A=" + StRet.A.ToString());
             lbLog.Items.Add("\r\n" + "B=" + StRet.B.ToString());
@@ -192,7 +192,7 @@ namespace PKMN_CALC.WinAppForm
         //    eTypeNo AttackType = eTypeNo.M_IWA;
         //    int EnemyPokemonNo = 999;
 
-        //    double d = CalcDamage.TypeBairituCalc(AttackType, EnemyPokemonNo);
+        //    double d = CalcBattle.TypeBairituCalc(AttackType, EnemyPokemonNo);
 
         //    lbLog.Items.Add("\r\n" + "いわ→じめん/ひこう" + d.ToString());
         //}
@@ -214,7 +214,7 @@ namespace PKMN_CALC.WinAppForm
         //    //努力値
         //    Status StDoryoku = new Status((252, 252, 0, 0, 0, 0));
         //    //ポケモン名＋性格名＋個体値＋努力値　があれば、実数値が計算可能。
-        //    Status StRet = CalcDamage.StatusCalc(998, 23, StKotai, StDoryoku);
+        //    Status StRet = CalcBattle.StatusCalc(998, 23, StKotai, StDoryoku);
         //    lbLog.Items.Add("\r\n" + "H=" + StRet.H.ToString());
         //    lbLog.Items.Add("\r\n" + "A=" + StRet.A.ToString());
         //    lbLog.Items.Add("\r\n" + "B=" + StRet.B.ToString());

@@ -60,9 +60,13 @@ namespace PKMN_CALC.Master
             PROJECT_DIR_PATH = GetProjectFolder();
             FileInit();// マスタデータは多いので、通常は明示的に起動時にロード
         }
+
+        /// <summary>
+        /// 明示的に起動時にロードする時用
+        /// </summary>
         public static void Load_Data()
         {
-            //明示的に起動時にロードする時用
+            FileInit();// マスタデータは多いので、通常は明示的に起動時にロード
         }
 
         /// <summary>
