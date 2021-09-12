@@ -110,11 +110,11 @@ namespace PKMN_CALC.Calc
         /// <param name="s">元ステータス</param>
         /// <param name="hp">現HP</param>
         /// <returns></returns>
-        public static Status CalcToDaiMax(Status s, ref int hp)
+        public static Status CalcToDaiMax(Status s, int iDaimax = 10)
         {
-            hp *= 2;
+            double retH = s.H * (1 + iDaimax * 0.1);
+            s.H = (int)Math.Floor(retH);
             return s;
-
         }
     }
 }
