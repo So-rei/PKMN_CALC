@@ -68,6 +68,9 @@ namespace PKMN_CALC.Master
                 case "じめん":
                 case "地":
                     return eTypeNo.M_JIMEN;
+                case "ひこう":
+                case "飛":
+                    return eTypeNo.M_HIKOU;
                 case "エスパー":
                 case "超":
                     return eTypeNo.M_ESP;

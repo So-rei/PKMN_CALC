@@ -21,7 +21,7 @@ namespace PKMN_CALC.Master
         public int Index { get; set; } //通しNo
         public int PokeDex_Index { get; set; } //図鑑No
         public int Form { get; set; }//必須でない 通常1 フォルムチェンジ=2以上
-        public int Region { get; set; } //リージョンフォーム。アローラ=1 ガラル=2
+        public string Form_JPN { get; set; } //(アローラのすがた)　など
         public string M_POKENAME_JPN { get; set; } //日本語名
         public string M_POKENAME_ENG { get; set; } //英語名
         public int Genelation { get; set; } //初登場世代
