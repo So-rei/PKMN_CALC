@@ -18,28 +18,30 @@ namespace PKMN_CALC.Master
     public class Master_Pokemon
     {
         //プロパティ
-        public int M_POKENO { get; set; }
-        public int M_FORM { get; set; }//必須でない
-        public string M_POKENAME_JPN { get; set; }
-        public string M_POKENAME_ENG { get; set; }
-        public int M_ZUKANNO { get; set; }
-        public int M_GENELATION { get; set; }
+        public int Index { get; set; } //通しNo
+        public int PokeDex_Index { get; set; } //図鑑No
+        public int Form { get; set; }//必須でない 通常1 フォルムチェンジ=2以上
+        public int Region { get; set; } //リージョンフォーム。アローラ=1 ガラル=2
+        public string M_POKENAME_JPN { get; set; } //日本語名
+        public string M_POKENAME_ENG { get; set; } //英語名
+        public int Genelation { get; set; } //初登場世代
         public eTypeNo M_TYPE_1 { get; set; }
         public eTypeNo? M_TYPE_2 { get; set; }//タイプ2は無いことがある
-        public int M_ABILITY_1 { get; set; }
-        public int M_ABILITY_2 { get; set; }
-        public int M_ABILITY_3 { get; set; }
-        public int M_H { get; set; } = 0;
-        public int M_A { get; set; } = 0;
-        public int M_B { get; set; } = 0;
-        public int M_C { get; set; } = 0;
-        public int M_D { get; set; } = 0;
-        public int M_S { get; set; } = 0;
-        public int M_SEX_PER { get; set; }
-        public int M_LO { get; set; }//未進化なら1
-        public int M_MEGA_POKENO1 { get; set; }//必須でない
-        public int M_MEGA_POKENO2 { get; set; }//必須でない
-        public int M_RULE_CATE { get; set; }//必須でない
+        public int M_ABILITY_1 { get; set; } //特性1
+        public int M_ABILITY_2 { get; set; } //特性2
+        public int M_ABILITY_3 { get; set; } //特性3
+        public int HP { get; set; } = 0;
+        public int Attack { get; set; } = 0;
+        public int Defense { get; set; } = 0;
+        public int Sp_Atk { get; set; } = 0;
+        public int Sp_Def { get; set; } = 0;
+        public int Speed { get; set; } = 0;
+        public int Sex_Per { get; set; } //性別：0性別なし　1♂のみ　2♂7:♀1　3♂1:♀1　4♂1：♀7　5♀のみ
+        public int[] Juvenile { get; set; }//配列固定サイズ2 [1,3] = 3段階進化の1段目
+        public string Legendary { get; set; }//通常=なし 準伝="pre" 伝="leg" 幻="ill"
+        public int M_MEGA_POKENO1 { get; set; }//必須でない メガシンカできるポケモンの場合、シンカ先のPOKENO(1)
+        public int M_MEGA_POKENO2 { get; set; }//必須でない メガシンカできるポケモンの場合、シンカ先のPOKENO(2)
+        public int Appearance_ShSw { get; set; } //剣盾に登場しない=0 登場=1,鎧=2,冠=3
 
         //HABCDSはStatusクラスとして運用する
         [JsonIgnore]
@@ -47,17 +49,9 @@ namespace PKMN_CALC.Master
         {
             get
             {
-                return new Status((M_H, M_A, M_B, M_C, M_D, M_S));//ステータスセット(HABCDS) シリアライズ処理関数で一旦objectを介しているので、タプル等では名前解決が出来なくなる
+                return new Status((HP, Attack, Defense, Sp_Atk, Sp_Def, Speed));//ステータスセット(HABCDS) シリアライズ処理関数で一旦objectを介しているので、タプル等では名前解決が出来なくなる
             }
         }
 
     }
-
-    /// <summary>
-    /// ランクデータ*******************************************************************************************************
-    ///
-    /// 性別：0性別なし　1♂のみ　2♂7:♀1　3♂1:♀1　4♂1：♀7　5♀のみ
-    /// 最終進化前フラグ：未進化なら1
-    /// ルールカテゴリ：　準伝１伝２幻３
-    /// </summary>
 }

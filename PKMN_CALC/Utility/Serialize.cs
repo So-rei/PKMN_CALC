@@ -28,7 +28,7 @@ namespace PKMN_CALC.Utility
         {
             try
             {
-                var text = File.ReadAllText(@filename, System.Text.Encoding.GetEncoding("shift_jis"));
+                var text = File.ReadAllText(@filename, System.Text.Encoding.GetEncoding("utf-8"));
                 return JsonConvert.DeserializeObject<IEnumerable<T>>(text);
             }
             catch (Exception ex)
@@ -48,7 +48,7 @@ namespace PKMN_CALC.Utility
             try
             {
                 //ストリームライターでファイルに保存
-                System.IO.StreamWriter sw = new System.IO.StreamWriter(filepath, false, System.Text.Encoding.GetEncoding("shift_jis"));
+                System.IO.StreamWriter sw = new System.IO.StreamWriter(filepath, false, System.Text.Encoding.GetEncoding("utf-8"));
                 sw.Write(JsonConvert.SerializeObject(cMT, Formatting.Indented));
                 sw.Close();
             }

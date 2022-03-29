@@ -40,7 +40,7 @@ namespace PKMN_CALC.Calc
                     return null;
                 }
 
-                var x = MASTER_POKEMON_LIST.Single(r => r.M_POKENO == PokeNo);//対象ポケモンデータ
+                var x = MASTER_POKEMON_LIST.Single(r => r.Index == PokeNo);//対象ポケモンデータ
                 var y = MASTER_SEIKAKU_LIST.Single(r => r.M_SEIKAKUNO == SeikakuNo);//対象性格  
 
                 Status StRet = new Status();

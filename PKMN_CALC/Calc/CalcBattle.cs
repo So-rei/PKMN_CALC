@@ -55,7 +55,7 @@ namespace PKMN_CALC.Calc
                 //タイプ1、タイプ2
                 var xtypeNo = MASTER_TYPE_LIST.Single(r => r.M_TYPENO == AttackType).M_TYPENO;//攻撃側タイプ
 
-                var y = MASTER_POKEMON_LIST.Single(r => r.M_POKENO == EnemyPokemonNo);//防御側ポケモンデータ            
+                var y = MASTER_POKEMON_LIST.Single(r => r.Index == EnemyPokemonNo);//防御側ポケモンデータ            
                 var ytype1No = MASTER_TYPE_LIST.Single(r => r.M_TYPENO == y.M_TYPE_1).M_TYPENO;//防御側タイプ1
                 var ytype2No = MASTER_TYPE_LIST.Single(r => r.M_TYPENO == y.M_TYPE_2).M_TYPENO;//防御側タイプ2
 
