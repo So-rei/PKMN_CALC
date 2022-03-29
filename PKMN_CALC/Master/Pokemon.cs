@@ -27,9 +27,9 @@ namespace PKMN_CALC.Master
         public int Genelation { get; set; } //初登場世代
         public eTypeNo M_TYPE_1 { get; set; }
         public eTypeNo? M_TYPE_2 { get; set; }//タイプ2は無いことがある
-        public int M_ABILITY_1 { get; set; } //特性1
-        public int M_ABILITY_2 { get; set; } //特性2
-        public int M_ABILITY_3 { get; set; } //特性3
+        public string Ability_1_JPN { get; set; } //特性1
+        public string Ability_2_JPN { get; set; } //特性2
+        public string Ability_3_JPN { get; set; } //特性3
         public int HP { get; set; } = 0;
         public int Attack { get; set; } = 0;
         public int Defense { get; set; } = 0;

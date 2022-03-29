@@ -38,6 +38,60 @@ namespace PKMN_CALC.Master
         public double M_HAGANE { get; set; }
         public double M_FAIRY { get; set; }
 
+        public static eTypeNo GetCode(string TypeStr)
+        {
+            switch (TypeStr)
+            {
+                case "ノーマル":
+                    return eTypeNo.M_NORMAL;
+                case "ほのお":
+                case "炎":
+                    return eTypeNo.M_HONOO;
+                case "みず":
+                case "水":
+                    return eTypeNo.M_MIZU;
+                case "でんき":
+                case "電":
+                    return eTypeNo.M_DENKI;
+                case "くさ":
+                case "草":
+                    return eTypeNo.M_KUSA;
+                case "こおり":
+                case "氷":
+                    return eTypeNo.M_KOORI;
+                case "かくとう":
+                case "闘":
+                    return eTypeNo.M_KAKUTOU;
+                case "どく":
+                case "毒":
+                    return eTypeNo.M_DOKU;
+                case "じめん":
+                case "地":
+                    return eTypeNo.M_JIMEN;
+                case "エスパー":
+                case "超":
+                    return eTypeNo.M_ESP;
+                case "むし":
+                case "虫":
+                    return eTypeNo.M_MUSI;
+                case "いわ":
+                case "岩":
+                    return eTypeNo.M_IWA;
+                case "ゴースト":
+                case "霊":
+                    return eTypeNo.M_GHOST;
+                case "ドラゴン":
+                case "龍":
+                    return eTypeNo.M_DRAGON;
+                case "あく":
+                case "悪":
+                    return eTypeNo.M_AKU;
+                case "フェアリー":
+                    return eTypeNo.M_FAIRY;
+                default:
+                    return eTypeNo.M_NULL;
+            }
+        }
     }
     public enum eTypeNo
     {
@@ -66,5 +120,6 @@ namespace PKMN_CALC.Master
     /// タイプデータ*******************************************************************************************************
     /// 無効0 いまひとつ0.5 通常1またはnull 抜群2
     /// </summary>
+   
 }
 
