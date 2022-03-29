@@ -37,11 +37,12 @@ namespace PKMN_CALC.Master
         public int Sp_Def { get; set; } = 0;
         public int Speed { get; set; } = 0;
         public int Sex_Per { get; set; } //性別：0性別なし　1♂のみ　2♂7:♀1　3♂1:♀1　4♂1：♀7　5♀のみ
-        public int[] Juvenile { get; set; }//配列固定サイズ2 [1,3] = 3段階進化の1段目
+        public int Juvenile { get; set; }//進化段階 1 = *段階進化の1段目
+        public int Juvenile_Max { get; set; }//進化段階 3 = 3段階進化
         public string Legendary { get; set; }//通常=なし 準伝="pre" 伝="leg" 幻="ill"
-        public int M_MEGA_POKENO1 { get; set; }//必須でない メガシンカできるポケモンの場合、シンカ先のPOKENO(1)
-        public int M_MEGA_POKENO2 { get; set; }//必須でない メガシンカできるポケモンの場合、シンカ先のPOKENO(2)
+        public int Mega { get; set; }//メガシンカポケモン=1
         public int Appearance_ShSw { get; set; } //剣盾に登場しない=0 登場=1,鎧=2,冠=3
+        public int Gen9Spare { get; set; }//9世代用予備
 
         //HABCDSはStatusクラスとして運用する
         [JsonIgnore]

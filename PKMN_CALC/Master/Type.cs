@@ -89,6 +89,9 @@ namespace PKMN_CALC.Master
                 case "あく":
                 case "悪":
                     return eTypeNo.M_AKU;
+                case "はがね":
+                case "鋼":
+                    return eTypeNo.M_HAGANE;
                 case "フェアリー":
                     return eTypeNo.M_FAIRY;
                 default:
