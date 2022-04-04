@@ -117,13 +117,50 @@ namespace PKMN_CALC.WinAppForm
 
         private void button2_Click(object sender, EventArgs e)
         {
-            for (int row = 0; row < dgv1.Rows.Count; row++)
+            bool bRet = false;
+            var poke = LoadMaster((Master_ID)cboMaster.SelectedIndex, ref bRet);
+            var _poke = ((IEnumerable<Master_Pokemon>)poke);
+            var siri_nn = _poke.Where(p => p.M_POKENAME_JPN.Last() == 'ン').Select(p => p.M_POKENAME_JPN).Distinct().ToList(); //おしりの文字が"ン"
+            var siri_each = _poke.Select(p => (p.M_POKENAME_JPN, GetEnd(p.M_POKENAME_JPN))).ToList(); //おしりの文字を変換・取得
+            var siri_each_uniq = new List<(string,char)>(); //そのうち、このおしりの文字になるポケモンはたった1匹しか居ない
+            siri_each.Distinct().ToList().ForEach(p =>
             {
-                dgv1.Rows[row].Cells["Index"].Value =row + 1;
+                if (siri_each.Count(q => q.Item2 == p.Item2) == 1) siri_each_uniq.Add(p);
+            });
+
+            var ngword = new List<string>();
+            siri_each_uniq.ForEach(p => {
+                var d = _poke.Where(q => q.M_POKENAME_JPN.First() == p.Item2);
+                if (d.Count() == 1)
+                    ngword.Add("*" + p.Item1 + " -> " + d.First().M_POKENAME_JPN);
+            });
+
+            char GetEnd(string name)
+            {
+                switch (name.Last()) {
+                    case 'ァ': return 'ア';
+                    case 'ィ': return 'イ';
+                    case 'ゥ': return 'ウ';
+                    case 'ェ': return 'エ';
+                    case 'ォ': return 'オ';
+                    case 'ッ': return 'ツ';
+                    case 'ャ': return 'ヤ';
+                    case 'ュ': return 'ユ';
+                    case 'ョ': return 'ヨ';
+                    case 'ー': return name[name.Count() - 2];
+                }
+                return name.Last();
             }
+
         }
 
 
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    //index振り直し
+        //    //for (int row = 0; row < dgv1.Rows.Count; row++)
+        //    //    dgv1.Rows[row].Cells["Index"].Value =row + 1;
+        //}
 
 
 
