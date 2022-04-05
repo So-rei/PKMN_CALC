@@ -114,30 +114,50 @@ namespace PKMN_CALC.WinAppForm
             lbLog.Items.Add("\r\n" + "D=" + StRet.D.ToString());
             lbLog.Items.Add("\r\n" + "S=" + StRet.S.ToString());
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             bool bRet = false;
             var poke = LoadMaster((Master_ID)cboMaster.SelectedIndex, ref bRet);
             var _poke = ((IEnumerable<Master_Pokemon>)poke);
-            var siri_nn = _poke.Where(p => p.M_POKENAME_JPN.Last() == 'ン').Select(p => p.M_POKENAME_JPN).Distinct().ToList(); //おしりの文字が"ン"
-            var siri_each = _poke.Select(p => (p.M_POKENAME_JPN, GetEnd(p.M_POKENAME_JPN))).ToList(); //おしりの文字を変換・取得
-            var siri_each_uniq = new List<(string,char)>(); //そのうち、このおしりの文字になるポケモンはたった1匹しか居ない
-            siri_each.Distinct().ToList().ForEach(p =>
-            {
-                if (siri_each.Count(q => q.Item2 == p.Item2) == 1) siri_each_uniq.Add(p);
-            });
+            //var siri_nn = _poke.Where(p => p.M_POKENAME_JPN.Last() == 'ン').Select(p => p.M_POKENAME_JPN).Distinct().ToList(); //おしりの文字が"ン"
+            var poke_setend = _poke.Where(p => p.Juvenile == p.Juvenile_Max && p.Legendary == "" && p.Appearance_ShSw > 0)//最終進化系かつ使用可能のみに限定し
+                                   .Select(p => (p, GetEnd(p.M_POKENAME_JPN))).ToList(); //おしりの文字を変換・取得
 
-            var ngword = new List<string>();
-            siri_each_uniq.ForEach(p => {
-                var d = _poke.Where(q => q.M_POKENAME_JPN.First() == p.Item2);
-                if (d.Count() == 1)
-                    ngword.Add("*" + p.Item1 + " -> " + d.First().M_POKENAME_JPN);
-            });
+            var siritori_list = new List<List<Master_Pokemon>>();
+            //しりとり開始
+            foreach (var kana in "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワ")
+            {
+                siritori_list.AddRange(CalcSiritori(new List<Master_Pokemon>(),kana, 0).ToList());
+            }
+
+            //結果出力 //合計Sでソート
+            long i = 1;
+            var pokeSearchAndSortedList = siritori_list.Where(p => p.Sum(q => Math.Max(q.Attack, q.Sp_Atk)) > 550).OrderByDescending(p => p.Sum(q => q.HP * (q.Defense + q.Sp_Def))).ToList(); //合計a/c550以上　耐久指数でソート
+            foreach (var pokelist in pokeSearchAndSortedList) 
+            {
+                var s = new StringBuilder();
+                foreach (var pl in pokelist)
+                    s.Append(pl.M_POKENAME_JPN + "→");
+
+                Console.WriteLine(i.ToString() + "," + 
+                                    "合計s=" + pokelist.Sum(p => p.Speed).ToString() + "," +
+                                    "合計aまたはc=" + pokelist.Sum(p => Math.Max(p.Attack,p.Sp_Atk)).ToString() + "," +
+                                    "合計耐久指数=" + pokelist.Sum(p => p.HP * (p.Defense + p.Sp_Def)).ToString() + "," +
+                                    s.ToString().TrimEnd('→'));
+
+                i++;
+
+                if (i > 1000)
+                    return;
+            }
+            return;
+
+            //処理用関数-------------------------------------------------------------------------
 
             char GetEnd(string name)
             {
-                switch (name.Last()) {
+                switch (name.Last())
+                {
                     case 'ァ': return 'ア';
                     case 'ィ': return 'イ';
                     case 'ゥ': return 'ウ';
@@ -152,7 +172,80 @@ namespace PKMN_CALC.WinAppForm
                 return name.Last();
             }
 
+            //メインしりとりループ
+            IEnumerable<List<Master_Pokemon>> CalcSiritori(List<Master_Pokemon> bfList, char name, int cnt)
+            {
+                if (cnt == 5)
+                {
+                    var r6 = poke_setend.Where(p => p.Item1.M_POKENAME_JPN[0] == name).ToList();
+                    foreach (var r in r6.Where(q => !bfList.Contains(q.p)))
+                    {
+                        var tbf = new List<Master_Pokemon>();
+                        foreach (var bf in bfList) tbf.Add(bf);
+                        tbf.Add(r.p);
+
+                        yield return tbf;
+                    }
+                    yield break;
+                }
+                else
+                {
+                    var rx = poke_setend.Where(p => p.Item1.M_POKENAME_JPN[0] == name).ToList();
+                    foreach (var r in rx.Where(q => !bfList.Contains(q.p)))
+                    {
+                        var tbf = new List<Master_Pokemon>();
+                        foreach (var bf in bfList) tbf.Add(bf);
+                        tbf.Add(r.p);
+
+                        var rnext = CalcSiritori(tbf,r.Item2, cnt + 1);
+                        foreach (var rr in rnext)
+                            yield return (rr);
+                    }
+                }
+            }
+
         }
+
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    bool bRet = false;
+        //    var poke = LoadMaster((Master_ID)cboMaster.SelectedIndex, ref bRet);
+        //    var _poke = ((IEnumerable<Master_Pokemon>)poke);
+        //    var siri_nn = _poke.Where(p => p.M_POKENAME_JPN.Last() == 'ン').Select(p => p.M_POKENAME_JPN).Distinct().ToList(); //おしりの文字が"ン"
+        //    var siri_each = _poke.Select(p => (p.M_POKENAME_JPN, GetEnd(p.M_POKENAME_JPN))).ToList(); //おしりの文字を変換・取得
+        //    var siri_each_uniq = new List<(string,char)>(); //そのうち、このおしりの文字になるポケモンはたった1匹しか居ない
+        //    siri_each.Distinct().ToList().ForEach(p =>
+        //    {
+        //        if (siri_each.Count(q => q.Item2 == p.Item2) == 1) siri_each_uniq.Add(p);
+        //    });
+
+        //    var ngword = new List<string>();
+        //    siri_each_uniq.ForEach(p => {
+        //        var d = _poke.Where(q => q.M_POKENAME_JPN.First() == p.Item2);
+        //        if (d.Count() == 1)
+        //            ngword.Add("*" + p.Item1 + " -> " + d.First().M_POKENAME_JPN);
+        //    });
+
+        //    //結果、ngwordの数=0なので、「...○」のあと、○から始まるポケモンが「○...ン」しかいないような組み合わせが存在しない事が確定。
+
+        //    char GetEnd(string name)
+        //    {
+        //        switch (name.Last()) {
+        //            case 'ァ': return 'ア';
+        //            case 'ィ': return 'イ';
+        //            case 'ゥ': return 'ウ';
+        //            case 'ェ': return 'エ';
+        //            case 'ォ': return 'オ';
+        //            case 'ッ': return 'ツ';
+        //            case 'ャ': return 'ヤ';
+        //            case 'ュ': return 'ユ';
+        //            case 'ョ': return 'ヨ';
+        //            case 'ー': return name[name.Count() - 2];
+        //        }
+        //        return name.Last();
+        //    }
+
+        //}
 
 
         //private void button2_Click(object sender, EventArgs e)
