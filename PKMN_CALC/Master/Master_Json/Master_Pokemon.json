@@ -11981,7 +11981,7 @@
     "Speed": 30,
     "Sex_Per": 0,
     "Juvenile": 1,
-    "Juvenile_Max": 1,
+    "Juvenile_Max": 3,
     "Legendary": "",
     "Mega": 0,
     "Appearance_ShSw": 3,
@@ -12008,7 +12008,7 @@
     "Speed": 50,
     "Sex_Per": 0,
     "Juvenile": 2,
-    "Juvenile_Max": 2,
+    "Juvenile_Max": 3,
     "Legendary": "",
     "Mega": 0,
     "Appearance_ShSw": 3,
@@ -27534,7 +27534,7 @@
     "Sex_Per": 0,
     "Juvenile": 1,
     "Juvenile_Max": 1,
-    "Legendary": "reg",
+    "Legendary": "leg",
     "Mega": 0,
     "Appearance_ShSw": 1,
     "Gen9Spare": 0
@@ -27561,7 +27561,7 @@
     "Sex_Per": 0,
     "Juvenile": 1,
     "Juvenile_Max": 1,
-    "Legendary": "reg",
+    "Legendary": "leg",
     "Mega": 0,
     "Appearance_ShSw": 1,
     "Gen9Spare": 0
@@ -27588,7 +27588,7 @@
     "Sex_Per": 0,
     "Juvenile": 1,
     "Juvenile_Max": 1,
-    "Legendary": "reg",
+    "Legendary": "leg",
     "Mega": 0,
     "Appearance_ShSw": 1,
     "Gen9Spare": 0
@@ -27615,7 +27615,7 @@
     "Sex_Per": 0,
     "Juvenile": 1,
     "Juvenile_Max": 1,
-    "Legendary": "reg",
+    "Legendary": "leg",
     "Mega": 0,
     "Appearance_ShSw": 1,
     "Gen9Spare": 0
@@ -27642,7 +27642,7 @@
     "Sex_Per": 0,
     "Juvenile": 1,
     "Juvenile_Max": 1,
-    "Legendary": "reg",
+    "Legendary": "leg",
     "Mega": 0,
     "Appearance_ShSw": 1,
     "Gen9Spare": 0
@@ -27669,7 +27669,7 @@
     "Sex_Per": 0,
     "Juvenile": 1,
     "Juvenile_Max": 1,
-    "Legendary": "",
+    "Legendary": "leg",
     "Mega": 0,
     "Appearance_ShSw": 1,
     "Gen9Spare": 0
