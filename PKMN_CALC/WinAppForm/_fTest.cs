@@ -206,6 +206,195 @@ namespace PKMN_CALC.WinAppForm
 
         }
 
+        private void btnGoro_Click(object sender, EventArgs e)
+        {
+            bool bRet = false;
+            var poke = LoadMaster((Master_ID)cboMaster.SelectedIndex, ref bRet);
+            var _poke = ((IEnumerable<Master_Pokemon>)poke);
+            var poke_setend = _poke.Where(p => p.Juvenile == p.Juvenile_Max && p.Appearance_ShSw > 0).ToList();//最終進化系かつ使用可能のみに限定
+
+            string value = txtgoro.Text;//語呂合わせの対象
+            var udic = new Dictionary<(int index, int cnt), List<string>>();//コレクション　<開始文字index,何文字か>,マッチする名前たち
+
+            for (int i = 0; i < value.Length; i++)
+                for (int c = 1; c < 4; c++)
+                    if (!SetMatchParams(i, c)) break;
+
+            //出力
+            int count = Math.Min(value.Count(), 6);//何匹でその語呂合わせを実現するか
+            for (int c = 2; c<= count; c++)
+            {
+                if (txtGoroCnt.Text != "" && decimal.TryParse(txtGoroCnt.Text, out decimal inputcnt) && c != inputcnt) continue;
+
+                var ret = getPtn(c, 0).ToList();
+
+                foreach (var r in ret)
+                {
+                    if (c == 2)
+                    {
+                        if (udic.TryGetValue((r[0], r[1] - r[0]), out List<string> v1) &&
+                            udic.TryGetValue((r[1], value.Length - r[1]), out List<string> v2))
+                        {
+                            foreach (var s1 in v1)
+                                foreach (var s2 in v2)
+                                    Console.WriteLine(s1 + "," + s2);
+                        }
+                    }
+                    if (c == 3)
+                    {
+                        if (udic.TryGetValue((r[0], r[1] - r[0]), out List<string> v1) &&
+                            udic.TryGetValue((r[1], r[2] - r[1]), out List<string> v2) &&
+                            udic.TryGetValue((r[2], value.Length - r[2]), out List<string> v3))
+                        {
+                            foreach (var s1 in v1)
+                                foreach (var s2 in v2)
+                                    foreach (var s3 in v3)
+                                        Console.WriteLine(s1 + "," + s2 + "," + s3);
+                        }
+                    }
+                    if (c == 4)
+                    {
+                        if (udic.TryGetValue((r[0], r[1] - r[0]), out List<string> v1) &&
+                            udic.TryGetValue((r[1], r[2] - r[1]), out List<string> v2) &&
+                            udic.TryGetValue((r[2], r[3] - r[2]), out List<string> v3) &&
+                            udic.TryGetValue((r[3], value.Length - r[3]), out List<string> v4))
+                        {
+                            try
+                            {
+                                if (v1.Count() * v2.Count() * v3.Count() * v4.Count() > 1_000_000)
+                                {
+                                    Console.WriteLine("1M件を超えてしまいます");
+                                    continue;
+                                }
+                            }
+                            catch
+                            {
+                                Console.WriteLine("1M件を超えてしまいます");
+                                continue;
+                            }
+
+                            foreach (var s1 in v1)
+                                foreach (var s2 in v2)
+                                    foreach (var s3 in v3)
+                                        foreach (var s4 in v4)
+                                        {
+                                            if (s1 == s2 || s1 == s3 || s1 == s4 || s2 == s3 || s2 == s4 || s3 == s4) continue;
+                                            Console.WriteLine(s1 + "," + s2 + "," + s3 + "," + s4);
+                                        }
+                        }
+                    }
+                    if (c == 5)
+                    {
+                        if (udic.TryGetValue((r[0], r[1] - r[0]), out List<string> v1) &&
+                            udic.TryGetValue((r[1], r[2] - r[1]), out List<string> v2) &&
+                            udic.TryGetValue((r[2], r[3] - r[2]), out List<string> v3) &&
+                            udic.TryGetValue((r[3], r[4] - r[3]), out List<string> v4) &&
+                            udic.TryGetValue((r[4], value.Length - r[4]), out List<string> v5))
+                        {
+                            try
+                            {
+                                if (v1.Count() * v2.Count() * v3.Count() * v4.Count() * v5.Count() > 1_000_000)
+                                {
+                                    Console.WriteLine("1M件を超えてしまいます");
+                                    continue;
+                                }
+                            }
+                            catch
+                            {
+                                Console.WriteLine("1M件を超えてしまいます");
+                                continue;
+                            }
+
+                            foreach (var s1 in v1)
+                                foreach (var s2 in v2)
+                                    foreach (var s3 in v3)
+                                        foreach (var s4 in v4)
+                                            foreach (var s5 in v5)
+                                            {
+                                                if (s1 == s2 || s1 == s3 || s1 == s4 || s1 == s5 || s2 == s3 || s2 == s4 || s2 == s5 || s3 == s4 || s3 == s5 || s4 == s5) continue;
+                                                Console.WriteLine(s1 + "," + s2 + "," + s3 + "," + s4 + "," + s5);
+                                            }
+                        }
+                    }
+                    if (c == 6)
+                    {
+                        if (udic.TryGetValue((r[0], r[1] - r[0]), out List<string> v1) &&
+                            udic.TryGetValue((r[1], r[2] - r[1]), out List<string> v2) &&
+                            udic.TryGetValue((r[2], r[3] - r[2]), out List<string> v3) &&
+                            udic.TryGetValue((r[3], r[4] - r[3]), out List<string> v4) &&
+                            udic.TryGetValue((r[4], r[5] - r[4]), out List<string> v5) &&
+                            udic.TryGetValue((r[5], value.Length - r[5]), out List<string> v6))
+                        {
+                            try
+                            {
+                                if (v1.Count() * v2.Count() * v3.Count() * v4.Count() * v5.Count() * v6.Count() > 1_000_000)
+                                {
+                                    Console.WriteLine("1M件を超えてしまいます");
+                                    continue;
+                                }
+                            }
+                            catch
+                            {
+                                Console.WriteLine("1M件を超えてしまいます");
+                                continue;
+                            }
+
+                            foreach (var s1 in v1)
+                                foreach (var s2 in v2)
+                                    foreach (var s3 in v3)
+                                        foreach (var s4 in v4)
+                                            foreach (var s5 in v5)
+                                                foreach (var s6 in v6)
+                                                {
+                                                    if (s1 == s2 || s1 == s3 || s1 == s4 || s1 == s5 || s2 == s3 || s2 == s4 || s2 == s5 || s3 == s4 || s3 == s5 || s4 == s5 ||
+                                                        s1 == s6 || s2 == s6 || s3 == s6 || s4 == s6 || s5 == s6) continue;
+                                                    Console.WriteLine(s1 + "," + s2 + "," + s3 + "," + s4 + "," + s5 + "," + s6);
+                                                }
+                        }
+                    }
+                }
+            }
+            return;
+
+            //------
+            bool SetMatchParams(int index, int cnt)
+            {
+                if (index + cnt > value.Length) return false;
+
+                var ret = poke_setend.Where(p => p.M_POKENAME_JPN.Contains(value.Substring(index, cnt))).Select(p => p.M_POKENAME_JPN + (p.Form == 2 ? ("(" + p.Form_JPN + ")") : "")).ToList();
+                udic.Add((index, cnt), ret);
+
+                return true;
+            }
+            IEnumerable<int[]> getPtn(int cc, int strcnt)
+            {
+                if (strcnt >= value.Length) yield break;
+                if (cc == 1)
+                {
+                    for (int i = 0; i < 3; i++)
+                        if (strcnt + i <= value.Length)
+                            yield return new int[1] { strcnt + i };
+                    yield break;
+                }
+
+                for (int i = 1; i < 4; i++)
+                {
+                    foreach (var next in getPtn(cc - 1, strcnt + i))
+                    {
+                        var ptn = new int[cc];
+                        ptn[0] = strcnt;
+                        int j = 1;
+                        foreach (var n in next)
+                        {
+                            ptn[j] = n;
+                            j++;
+                        }
+                        yield return ptn;
+                    }
+                }
+            }
+        }
+
         //private void button2_Click(object sender, EventArgs e)
         //{
         //    bool bRet = false;

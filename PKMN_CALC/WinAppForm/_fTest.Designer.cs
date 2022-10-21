@@ -37,7 +37,13 @@
             this.btn_Load = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btnGoro = new System.Windows.Forms.Button();
+            this.txtgoro = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtGoroCnt = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -78,10 +84,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(142, 92);
+            this.dgv1.Location = new System.Drawing.Point(246, 92);
             this.dgv1.Name = "dgv1";
             this.dgv1.RowTemplate.Height = 21;
-            this.dgv1.Size = new System.Drawing.Size(1430, 881);
+            this.dgv1.Size = new System.Drawing.Size(1445, 881);
             this.dgv1.TabIndex = 13;
             // 
             // cboMaster
@@ -132,11 +138,60 @@
             this.button3.Text = "button3";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // btnGoro
+            // 
+            this.btnGoro.Location = new System.Drawing.Point(54, 77);
+            this.btnGoro.Name = "btnGoro";
+            this.btnGoro.Size = new System.Drawing.Size(75, 23);
+            this.btnGoro.TabIndex = 20;
+            this.btnGoro.Text = "calc!";
+            this.btnGoro.UseVisualStyleBackColor = true;
+            this.btnGoro.Click += new System.EventHandler(this.btnGoro_Click);
+            // 
+            // txtgoro
+            // 
+            this.txtgoro.Location = new System.Drawing.Point(6, 18);
+            this.txtgoro.Name = "txtgoro";
+            this.txtgoro.Size = new System.Drawing.Size(171, 19);
+            this.txtgoro.TabIndex = 21;
+            this.txtgoro.Text = "ノーザン";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.txtGoroCnt);
+            this.groupBox1.Controls.Add(this.btnGoro);
+            this.groupBox1.Controls.Add(this.txtgoro);
+            this.groupBox1.Location = new System.Drawing.Point(13, 487);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(183, 106);
+            this.groupBox1.TabIndex = 22;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "語呂";
+            // 
+            // txtGoroCnt
+            // 
+            this.txtGoroCnt.Location = new System.Drawing.Point(24, 49);
+            this.txtGoroCnt.Name = "txtGoroCnt";
+            this.txtGoroCnt.Size = new System.Drawing.Size(45, 19);
+            this.txtGoroCnt.TabIndex = 23;
+            this.txtGoroCnt.Text = "4";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(75, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 12);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "匹で語呂合わせ";
+            // 
             // _fTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1584, 985);
+            this.ClientSize = new System.Drawing.Size(1703, 985);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_Load);
@@ -150,6 +205,8 @@
             this.Text = "Form1";
             this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -165,6 +222,11 @@
         private System.Windows.Forms.Button btn_Load;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnGoro;
+        private System.Windows.Forms.TextBox txtgoro;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtGoroCnt;
+        private System.Windows.Forms.Label label1;
     }
 }
 
